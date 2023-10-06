@@ -14,4 +14,6 @@ emp_2 = Employee('Melvin','Lim',60000)
 
 print(emp_1.email)
 
+#both syntax below are the same
 print(emp_1.fullname())
+print(Employee.fullname(emp_1))
