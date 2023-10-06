@@ -10,7 +10,7 @@ class Employee:
         return '{} {}'.format(self.first, self.last)
         
 emp_1 = Employee('Winfred','Cheok',50000)
-emp_2 = Employee('Melvin','Lim',60000)
+emp_2 = Employee('Melvin','Lee',60000)
 
 print(emp_1.email)
 
