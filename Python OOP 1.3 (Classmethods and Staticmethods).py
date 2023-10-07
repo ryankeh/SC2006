@@ -21,9 +21,22 @@ class Employee:
     def set_raise_amt(cls, amount):
         #cannot use class as a name cos is a keyterm used to declare classes
         cls.raise_amount=amount
+    
+    #alternative constructor
+    @classmethod
+    def from_string(cls, emp_str):
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
+
         
 emp_1 = Employee('Winfred','Cheok',50000)
 emp_2 = Employee('Melvin','Lim',60000)
+
+#testing alternative constructor
+emp_str_3 = 'Reyan-Thong-70000'
+emp_3 = Employee.from_string(emp_str_3)
+print(emp_3.__dict__)
+
 
 Employee.set_raise_amt(1.05)
 #can do with class or any instance of the class
@@ -31,7 +44,3 @@ Employee.set_raise_amt(1.05)
 print(Employee.raise_amount)
 print(emp_1.raise_amount)
 print(emp_2.raise_amount)
-
-
-
-
