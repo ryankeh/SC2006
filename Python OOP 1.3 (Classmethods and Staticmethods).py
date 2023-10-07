@@ -27,6 +27,13 @@ class Employee:
     def from_string(cls, emp_str):
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
+        
+    #used if you dont use the class or self variable
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
 
         
 emp_1 = Employee('Winfred','Cheok',50000)
@@ -44,3 +51,11 @@ Employee.set_raise_amt(1.05)
 print(Employee.raise_amount)
 print(emp_1.raise_amount)
 print(emp_2.raise_amount)
+
+#testing staticmethod
+import datetime
+my_date = datetime.date(2023,10,7)
+#7th October (Saturday)
+print(Employee.is_workday(my_date))
+
+
