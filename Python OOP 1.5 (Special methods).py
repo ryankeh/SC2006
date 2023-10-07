@@ -28,6 +28,9 @@ class Employee:
     #used to define the "+" operand
     def __add__(self, other):
         return self.pay + other.pay
+        
+    def __len__(self):
+        return len(self.fullname())
 
         
 emp_1 = Employee('Winfred','Cheok',50000)
@@ -38,5 +41,7 @@ print(emp_1.__repr__())
 print(emp_1.__str__())
 #demonstrating the "__add__" method
 print(emp_1 + emp_2)
+#demonstrating the "__len__" method
+print(len(emp_1))
 
-
+#return(NotImplemented) at the bottom of the function will let the program fall back on the original function to see if it knows how to handle the operation
