@@ -54,10 +54,25 @@ class Manager(Employee):
 dev_1 = Developer('Winfred','Cheok',50000,'Python')
 dev_2 = Developer('Melvin','Lim',60000,'Java')
 
-print(dev_1.email)
-print(dev_1.prog_lang)
+mgr_1 = Manager('Li','Fang',90000,[dev_1])
 
-print(dev_1.pay)
-dev_1.apply_raise()
-print(dev_1.pay)
+print(mgr_1.email)
+mgr_1.add_emp(dev_2)
+mgr_1.remove_emp(dev_1)
+mgr_1.print_emps()
+
+#some usefule python functions
+print(isinstance(mgr_1, Manager))
+print(isinstance(mgr_1, Employee))
+print(isinstance(mgr_1, Developer))
+
+print(issubclass(Developer, Employee))
+print(issubclass(Manager, Developer))
+
+# print(dev_1.email)
+# print(dev_1.prog_lang)
+# print(dev_1.pay)
+# dev_1.apply_raise()
+# #increases by developers 1.10 instead of the usual 1.04
+# print(dev_1.pay)
 
