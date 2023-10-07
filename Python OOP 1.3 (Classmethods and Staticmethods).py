@@ -58,4 +58,7 @@ my_date = datetime.date(2023,10,7)
 #7th October (Saturday)
 print(Employee.is_workday(my_date))
 
+my_date = datetime.date(2023,10,9)
+#9th October (Monday)
+print(Employee.is_workday(my_date))
 
