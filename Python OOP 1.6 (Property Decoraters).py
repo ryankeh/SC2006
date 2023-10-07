@@ -31,7 +31,7 @@ class Employee:
 emp_1 = Employee('Winfred','Cheok')
 emp_2 = Employee('Melvin','Lim')
 
-emp_1.first = "Losefred"
+emp_1.first = "Winferd"
 emp_1.fullname = 'Qi Wei'
 
 #testing block
